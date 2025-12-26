@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    padding: 16px 180px;
+    background-color: #000;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+/* левая и правая части */
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    flex: 1;
+}
+
+header > div:first-child {
+    justify-content: flex-start;
+}
+
+header > div:last-child {
+    justify-content: flex-end;
+}
+
+/* ссылки */
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+header a:hover {
+    color: #9e1e1e;
+}
+
+/* логотип по центру */
+header img#logo {
+    width: 235px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    align-items: center;
+}
+
+/* иконки (svg) */
+header svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: fill 0.2s ease;
+}
+
+header a:hover svg {
+    fill: #9e1e1e;
+}
+
+.mainImg {
+    width: 100%;
+}
+
+.mainImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contentSection {
+    padding: 80px 180px;
+    background: #000;
+}
+
+.contentSection h2 {
+    color: #9e1e1e;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.resourceCard {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+}
+
+.image-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+
+.link-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.image-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    transition: background 0.3s ease;
+}
+
+.image-link:hover::after {
+    background: rgba(0, 0, 0, 0.55);
+}
+
+footer {
+    padding: 40px 180px;
+    background-color: #000;
+    border-top: 1px solid #1e1e1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+}
