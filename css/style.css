@@ -98,8 +98,12 @@ header a:hover svg {
 
 .cardContainer{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    justify-content: center;
+    gap: 60px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .resourceCard {
@@ -162,15 +166,24 @@ footer img {
     margin: 0;
 }
 
-/* ===== Hero-блок ===== */
 .hero {
-    min-height: calc(100vh - 120px); /* занимает почти весь экран */
+    min-height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
-    justify-content: center; /* вертикально по центру */
-    align-items: center;     /* горизонтально по центру */
+    justify-content: flex-start;   /* было center */
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 120px 20px 60px;      /* было 20px */
+}
+
+.hero3 {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;   /* было center */
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 60px;      /* было 20px */
 }
 
 .hero h1 {
@@ -190,6 +203,14 @@ footer img {
     color: #cccccc;
     margin-bottom: 30px;
 }
+
+.hero h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
+
 
 .hero p {
     font-size: 18px;
@@ -273,3 +294,40 @@ footer img {
     margin-left: 30px; 
     margin-bottom: 24px;
 }
+
+.image-text-section {
+    padding: 60px 180px;
+    background-color: #000;
+    color: #fff;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* расстояние между фото и текстом */
+}
+
+.image-block img {
+    width: 500px;       /* уменьшили ширину */
+    height: 600px;      /* прямоугольная форма */
+    object-fit: cover;  /* сохраняем пропорции и обрезаем лишнее */
+    border-radius: 8px; /* закругление углов */
+}
+
+
+.text-block {
+    max-width: 600px;
+}
+
+.text-block h2 {
+    color: #9e1e1e;
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.text-block p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
